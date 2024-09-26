@@ -1,0 +1,325 @@
+html, body {
+    margin: 0;
+    padding: 0; /* Плавное изменение фона */
+}
+
+.search-film-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+.search-films {
+    margin-top: 25px;
+    display: flex;
+    flex-grow: 1;
+    background: #CFCFCF;
+    border-radius: 20px;
+    padding-left: 10px;
+    font-size: 17px;
+    height: 30px;
+    border: 1px solid black;
+}
+
+.try-search-btn, .next-movie-button, .last-movie-button {
+    cursor: pointer;
+    margin-left: 10px;
+    height: 20px;
+    margin-top: 25px;
+    background: #CFCFCF;
+}
+
+.try-search-btn {
+    height: 30px;
+    font-size: 14px;
+    height: 35px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-block: auto;
+    padding-block: inherit;
+}
+
+.last-movie-button {
+    margin-left: 86px;
+    margin-right: 15px;
+}
+
+.last-movie-button, .next-movie-button {
+    font-size: 30px;
+    color: purple;
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+}
+
+.movie-container {
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+.movie-poster-active__years {
+    text-align: -webkit-center;
+    font-size: 20px;
+}
+
+.movie-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Сетка из 3 столбцов */
+    gap: 20px;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+.movie {
+    position: relative;
+    transition: transform 0.3s, background-color 0.3s; /* Анимация для увеличения */
+    overflow: hidden;
+}
+
+.movie img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease; /* Анимация для увеличения картинки */
+}
+
+.movie-expanded {
+    transform: scale(1.1); /* Увеличение при клике */
+}
+
+.movie-expanded img {
+    transform: scale(1.1); /* Увеличение картинки */
+}
+
+.movie-info {
+    position: absolute;
+    bottom: -100px; /* Скрываем текст */
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    transition: bottom 0.3s ease; /* Плавное появление */
+    text-align: center;
+}
+
+.movie-expanded .movie-info {
+    bottom: 0; /* Показываем текст при клике */
+}
+
+.movie-poster-active__image {
+    max-width: 500px;
+    max-height: 500px;
+}
+
+.movie-poster-active__title {
+    font-size: 49px;
+    margin-top: 5px;
+    margin-bottom: 35px;
+}
+
+
+.movie-poster-active {
+    width: 70px;
+    border-radius: 10px;
+    display: block;
+}
+
+
+.movie-poster-active__container--props {
+    margin-left: 25px;
+    font-size: 19px;
+}
+
+.movie-poster-title {
+    font-size: 54px;
+    color: var(--colorHeaderLink);
+    font-weight: 1000;
+    margin-top: 75px;
+}
+
+.movie-poster-title-under-image {
+    margin-bottom: 30px;
+}
+
+.movie-poster-years {
+    margin-left: 20px;
+    color: var(--colorHeaderLink);
+}
+
+
+.movie-poster-active__button {
+    height: 40px;
+    border-radius: 10px;
+    margin-right: 45px;
+    color: var(--colorHeaderLink);
+    background: purple;
+    font-size: 24px;
+    cursor: pointer;
+    border: 2px solid black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.movie-poster-active__button-container {
+    margin-top: 25px;
+    display: inline-flex;
+
+}
+
+.button__add-selected {
+    background: var(--backgroundColor);
+    border: none;
+    margin-top: -10px;
+    margin-right: 45px;
+    cursor: pointer;
+}
+
+.search-films-container {
+  padding: 20px;
+  height: 100vh;
+}
+
+
+.search-film-header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 80px;
+}
+
+.search-films-input {
+  width: 300px;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.try-search-btn {
+  margin-left: 10px;
+  padding: 5px 20px;
+  font-size: 19px;
+  cursor: pointer;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.movie-details {
+  margin-left: 100px;
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 90px;
+  display: flex;
+  justify-content: center;
+}
+
+.movie-details .container {
+    justify-content: start;
+}
+
+.movie-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.movie-card:hover {
+  transform: scale(1.02);
+}
+
+.movie-poster {
+  min-width: 204px;
+  max-height: 410px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+h3 {
+  margin-top: 10px;
+  color: white;
+  font-size: 18px;
+}
+
+
+/* Контейнер для слайдера */
+.movie-slider-container {
+    width: 80%;
+    margin: 0 auto;
+    position: relative; /* Для позиционирования стрелок */
+  }
+  
+  /* Стрелки навигации */
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+    border-radius: 50%;
+    padding: 15px;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+
+  
+  .swiper-button-prev {
+    left: -60px; /* Сдвигаем стрелку за пределы слайдера */
+  }
+  
+  .swiper-button-next {
+    right: -60px; /* Сдвигаем стрелку за пределы слайдера */
+  }
+  
+  /* Карточка фильма */
+  .movie-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Увеличение изображения при наведении */
+  .movie-card:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Стили для выбранного фильма */
+  .movie-card.selected {
+    transform: scale(1.2); /* Увеличение выбранного фильма */
+  }
+  
+  h3 {
+    margin-top: 10px;
+    color: white;
+    font-size: 18px;
+  }
+
+
+  
+  /* Адаптивность для слайдера */
+  @media (max-width: 768px) {
+    .swiper-button-prev,
+    .swiper-button-next {
+      display: none; /* Скрыть стрелки на мобильных устройствах */
+    }
+  
+    .movie-card:hover {
+      transform: none;
+    }
+  
+    .movie-card.selected {
+      transform: none;
+    }
+  }
+  

@@ -1,0 +1,69 @@
+.container {
+    max-width: 1920px;
+    margin: 0 auto;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.main-content {
+    /* margin-top: 166px; */
+    display: flex;
+    justify-content: space-between; /* Разделяем левый и правый блоки */
+    align-items: flex-start; /* Выравниваем по верхнему краю */
+    flex-wrap: wrap; /* Делаем гибкий перенос элементов */
+    gap: 172px; /* Устанавливаем расстояние между элементами */
+}
+
+.main-left-content__title {
+    margin-top: 179px;
+    max-width: 700px;
+    font-size: 58px;
+    font-weight: 800;
+    line-height: 70.7px;
+    color: var(--colorHeaderLink);
+    margin-bottom: 10px;
+}
+
+.main-left-content__props {
+    max-width: 631px;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 39.01px;
+    color: var(--colorHeaderLink);
+}
+
+.main-right-content {
+    margin-top: 130px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Отступы между постерами */
+}
+
+.main-right-content__poster {
+    max-width: 100%; /* Ограничиваем ширину постеров */
+    height: auto; /* Автоматическая настройка высоты для сохранения пропорций */
+}
+
+.main-left-content__button--search-film {
+    margin-top: 47px;
+    width: 219px;
+    height: 64px;
+    background: linear-gradient(131.24deg, #EA0F0F -1.9%, #D44FD7 83.13%);
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 43.9px;
+    color: var(--colorHeaderLink);
+    border: none;
+    border-radius: 80px;
+    cursor: pointer;
+}
+
+.circle-blure {
+    border-radius: 666px;
+    background: #D9D9D9;
+    filter: blur(100px);
+    width: 666px;
+    height: 455px;
+}

@@ -1,38 +1,218 @@
-.App {
-  text-align: center;
+
+
+
+html, body {
+    margin: 0;
+    padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    background: var(--backgroundColorSite);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'MontserratExtraBold';
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+p, span, a, li, ul, button {
+    font-family: 'MontserratRegular';
 }
 
-.App-link {
-  color: #61dafb;
+a {
+    text-decoration: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+p, h1, h2, h3, h4, h5{margin: 0;}
+
+
+:root {
+    --backgroundColorSite: linear-gradient(#aa4848 0%, #dc3333 1%, #911794 72%, #b93b96 100%);
+    --colorHeaderLink: #fff;
+    --colorHeaderName: #fff;
+    --colorHeaderLinkHover: blue;
+}
+
+@media (max-width: 1451px){
+    html, body {
+        width: 1266px;
+        height: 1100px;
+    }
+
+    .search-films-input, .try-search-btn {
+        font-size: 16px;
+    }
+
+    .movie-poster-active__title {
+        font-size: 45px;
+    }
+
+    .movie-poster-active__button {
+        font-size: 20px;
+    }
+
+    .movie-poster-active__container--props {
+        font-size: 17px;
+    }
+
+    .container {
+        max-width: 1166px;
+        margin-left: 100px;
+        margin-right: 100px;
+        justify-content: center;
+    }
+
+    .main-left-content__title {
+        font-size: 46px;
+    }
+
+    .header-name {
+        font-size: 30px;
+    }
+
+    .header-nav-link, .header-tel-link {
+        font-size: 20px;
+    }
+    
+    .main-left-content__props {
+        font-size: 20px;
+    }
+    
+    .main-content {
+        flex-wrap: nowrap;
+        gap: 142px;
+    }
+
+    .header-name {
+        margin-right: 50px;
+    }
+
+    .header-content {
+        margin-top: 50px;
+    }
+
+    .main-left-content__title {
+        margin-top: 125px;
+    }
+    
+}
+
+@media (max-width: 1280px){
+    html, body {
+        width: 1280px;
+    }
+
+    .container {
+        max-width: 1080px;
+    }
+
+    .main-content {
+        gap: 100px;
+    }
+
+    .header-content {
+        margin-top: 40px;
+    }
+
+    .main-left-content__title {
+        margin-top: 115px;
+    }
+
+    .search-films-input, .try-search-btn {
+        font-size: 14px;
+    }
+
+    .movie-poster-active__title {
+        font-size: 41px;
+    }
+
+    .movie-poster-active__button {
+        font-size: 26px;
+    }
+
+    .movie-poster-active__container--props {
+        font-size: 15px;
+    }
+    
+}
+
+@media (max-width: 1000px){
+    html, body {
+        width: 1000px;
+    }
+
+    .container {
+        max-width: 880px;
+    }
+
+    .main-content {
+        gap: 60px;
+    }
+
+    .main-left-content__title {
+        margin-top: 100px;
+    }
+
+    .search-films-input, .try-search-btn {
+        font-size: 12px;
+    }
+
+    .movie-poster-active__title {
+        font-size: 38px;
+    }
+
+    .movie-poster-active__button {
+        font-size: 16px;
+    }
+
+    .movie-poster-active__container--props {
+        font-size: 15px;
+    }
+}
+
+
+@media only screen and (orientation: portrait) and (min-device-width: 360px){
+	.header-nav-link, .header-tel-link, .header-tel, .main-right-content {
+        display: none;
+    }
+
+    html {
+        max-width: 428px;
+        height: 1000px;
+        overflow: hidden;
+    }
+
+    .container {
+        flex-wrap: wrap;
+        
+    }
+
+    .header-name {
+        font-size: 30px;
+    }
+
+    .main-content {
+        max-width: 350px;
+    }
+    
+    .main-left-content__title {
+        margin-top: 50px;
+        font-size: 40px;
+        max-width: 350px;
+        line-height: normal;
+    }
+}
+ 
+
+@font-face {
+    font-family: 'MontserratExtraBold';
+    src: url('../src/fonts/MontserratExtraBold.ttf') format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'MontserratRegular';
+    src: url('../src/fonts/MonterratRegular.ttf') format("truetype");
+    font-style: normal;
+    font-weight: normal;
 }
