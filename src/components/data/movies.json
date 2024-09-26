@@ -1,0 +1,30 @@
+{
+    "movies": [
+      {
+        "imdbID": "tt0816692",
+        "title": "Interstellar",
+        "year": "2014",
+        "videoUrl": "https://dzen.ru/embed/vK-k3JVhPdF4?autoplay=1"
+      },
+      {
+        "imdbID": "tt4415360",
+        "title": "The Science of Interstellar",
+        "year": "2014",
+        "videoUrl": "//ok.ru/videoembed/1960128744131?autoplay=1"
+      },    
+      {
+        "imdbID": "tt1375666",
+        "title": "Inception",
+        "year": "2010",
+        "videoUrl": "https://www.youtube.com/embed/YoHD9XEInc0"
+      },
+      {
+        "imdbID": "tt0848228",
+        "title": "The Avengers",
+        "year": "2012",
+        "videoUrl": "https://www.youtube.com/embed/eOrNdBpGMv8"
+      }
+    ]
+  }
+
+  
